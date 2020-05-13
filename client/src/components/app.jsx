@@ -27,7 +27,7 @@ export default class Reviews extends React.Component {
         this.getUsers();
     }
     getRevs() {
-        axios.get('/reviews')
+        axios.get('http://localhost:5050/reviews')
             .then(result => {
                 this.setState({
                     sorted: result.data
@@ -58,7 +58,7 @@ export default class Reviews extends React.Component {
             .catch(err => console.error(err))
     }
     getUsers(){
-        axios.get('/reviews/users')
+        axios.get('http://localhost:5050/reviews/users')
             .then(results => {
                 this.setState({
                     users: results.data
