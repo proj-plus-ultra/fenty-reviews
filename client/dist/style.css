@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.reviews{
+    font-family: 'Questrial';
+}
+.reviewSearchContainer{
+    font-family: 'Arial'
+}
+.review-overview{
+    background-image: url('https://www.fentybeauty.com/on/demandware.static/-/Sites-FENTY-Library/default/dw369405b2/images/Reviews_BG_top.png');
+    background-repeat: no-repeat;
+    background-position: right top; 
+    background-clip: padding-box;
+}
+.review-list{
+    background-image: url('https://www.fentybeauty.com/on/demandware.static/-/Sites-FENTY-Library/default/dw80780e09/images/Reviews_BG_bottom.png');
+    background-repeat: no-repeat;
+    background-position: bottom left; 
+}
+.review-snapshot{
+    float: none;
+}
+.reviewSearchContainer{
+    width: 50
+}
+.rev-dropdown-content{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+    padding: 10px 10px 10px 10px;
+}
+.rev-dropDown:hover .rev-dropdown-content {
+    display: block;
+}
+.rev-load-more-btn{
+    display: flex;
+    justify-content: center;
+}
+.rev-load-more-btn button:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content div:hover {
+    background-color: #ddd;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.helpful-votes button{
+    background-color: #ededed;
+    box-shadow: none;
+    border: none;
+    font-size: 24;
+    padding: 5px 5px 5px 5px;
+    margin: 4px;
+    font-weight: 700;
+}
+.reviewSearchContainer button{
+    background-color: #ededed;
+    box-shadow: none;
+    border: none;
+    padding: inherit;
+    font-weight: 700;
+}
+.helpful-votes button:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
