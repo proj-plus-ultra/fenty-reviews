@@ -2574,7 +2574,7 @@ var Overview = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'rev-overview-container', style: { display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' } },
+                    { className: 'rev-overview-container', style: { display: 'flex', flexDirection: 'row', justifyContent: 'left' } },
                     _react2.default.createElement(
                         'div',
                         { className: 'rating-snapshot', style: { fontSize: 13, width: '100%', paddingLeft: 20 } },
@@ -2665,81 +2665,77 @@ var Overview = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { style: { width: '50%' } },
+                        { className: 'avg-cust-rating', style: { fontSize: 13, width: '100%' } },
                         _react2.default.createElement(
                             'div',
-                            { className: 'avg-cust-rating', style: { fontSize: 13, width: '100%' } },
+                            { style: { paddingBottom: '10px' } },
+                            'Average Customer Rating'
+                        ),
+                        _react2.default.createElement(
+                            'table',
+                            { className: 'avg-customer-ratings' },
                             _react2.default.createElement(
-                                'div',
-                                { style: { paddingBottom: '10px' } },
-                                'Average Customer Rating'
-                            ),
-                            _react2.default.createElement(
-                                'table',
-                                { className: 'avg-customer-ratings' },
+                                'tbody',
+                                { style: { lineHeight: '20px' } },
                                 _react2.default.createElement(
-                                    'tbody',
-                                    { style: { lineHeight: '20px' } },
+                                    'tr',
+                                    { className: 'overall' },
                                     _react2.default.createElement(
-                                        'tr',
-                                        { className: 'overall' },
-                                        _react2.default.createElement(
-                                            'td',
-                                            null,
-                                            'Overall'
-                                        ),
-                                        _react2.default.createElement(
-                                            'td',
-                                            { style: { paddingLeft: '10px' } },
-                                            _react2.default.createElement(_reactStarRatings2.default, { starDimension: '18px', starSpacing: '0px', name: 'rev-rating', starRatedColor: 'black', totalStars: 5, rating: this.props.revSnapshot.avgRev }),
-                                            ' '
-                                        ),
-                                        _react2.default.createElement(
-                                            'td',
-                                            { style: { paddingLeft: '40px' } },
-                                            ' ',
-                                            (Math.round(this.props.revSnapshot.avgRev * 100) / 100).toFixed(1)
-                                        )
+                                        'td',
+                                        null,
+                                        'Overall'
                                     ),
                                     _react2.default.createElement(
-                                        'tr',
-                                        { className: 'quality-of-product' },
-                                        _react2.default.createElement(
-                                            'td',
-                                            null,
-                                            'Quality of Product'
-                                        ),
-                                        _react2.default.createElement(
-                                            'td',
-                                            { style: { paddingLeft: '10px' } },
-                                            _react2.default.createElement(Bar, { rev: this.props.revSnapshot.avgQual, ttlRev: 5, width: '100%' })
-                                        ),
-                                        _react2.default.createElement(
-                                            'td',
-                                            { style: { paddingLeft: '40px' } },
-                                            ' ',
-                                            (Math.round(this.props.revSnapshot.avgQual * 100) / 100).toFixed(1)
-                                        )
+                                        'td',
+                                        { style: { paddingLeft: '10px' } },
+                                        _react2.default.createElement(_reactStarRatings2.default, { starDimension: '18px', starSpacing: '0px', name: 'rev-rating', starRatedColor: 'black', totalStars: 5, rating: this.props.revSnapshot.avgRev }),
+                                        ' '
                                     ),
                                     _react2.default.createElement(
-                                        'tr',
-                                        { className: 'value-of-product' },
-                                        _react2.default.createElement(
-                                            'td',
-                                            null,
-                                            'Value of Product'
-                                        ),
-                                        _react2.default.createElement(
-                                            'td',
-                                            { style: { paddingLeft: '10px' } },
-                                            _react2.default.createElement(Bar, { rev: this.props.revSnapshot.avgVal, ttlRev: 5, width: '100%' })
-                                        ),
-                                        _react2.default.createElement(
-                                            'td',
-                                            { style: { paddingLeft: '40px' } },
-                                            ' ',
-                                            (Math.round(this.props.revSnapshot.avgVal * 100) / 100).toFixed(1)
-                                        )
+                                        'td',
+                                        { style: { paddingLeft: '40px' } },
+                                        ' ',
+                                        (Math.round(this.props.revSnapshot.avgRev * 100) / 100).toFixed(1)
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'tr',
+                                    { className: 'quality-of-product' },
+                                    _react2.default.createElement(
+                                        'td',
+                                        null,
+                                        'Quality of Product'
+                                    ),
+                                    _react2.default.createElement(
+                                        'td',
+                                        { style: { paddingLeft: '10px' } },
+                                        _react2.default.createElement(Bar, { rev: this.props.revSnapshot.avgQual, ttlRev: 5, width: '100%' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'td',
+                                        { style: { paddingLeft: '40px' } },
+                                        ' ',
+                                        (Math.round(this.props.revSnapshot.avgQual * 100) / 100).toFixed(1)
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'tr',
+                                    { className: 'value-of-product' },
+                                    _react2.default.createElement(
+                                        'td',
+                                        null,
+                                        'Value of Product'
+                                    ),
+                                    _react2.default.createElement(
+                                        'td',
+                                        { style: { paddingLeft: '10px' } },
+                                        _react2.default.createElement(Bar, { rev: this.props.revSnapshot.avgVal, ttlRev: 5, width: '100%' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'td',
+                                        { style: { paddingLeft: '40px' } },
+                                        ' ',
+                                        (Math.round(this.props.revSnapshot.avgVal * 100) / 100).toFixed(1)
                                     )
                                 )
                             )
