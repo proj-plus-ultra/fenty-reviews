@@ -29,7 +29,7 @@ class Overview extends React.Component {
     }
     render () {
         return (
-            <div className="review-overview" style={{marginTop: '-1.1em',  marginRight: '-1em'}}>
+            <div className="review-overview" /*style={{marginTop: '-1.1em',  marginRight: '-1em'}}*/>
                 <h1 style={{textAlign: 'center',  paddingTop: 75, fontSize: 26, fontStyle: 'normal', fontWeight: 900}}>REVIEWS</h1>
                 <h2 onClick={this.props.onClick} style={{textAlign: 'center', fontSize: 13}}>WRITE A REVIEW</h2>
                 <table style={{width: '100%', paddingTop: 40, paddingBottom: 30}}>

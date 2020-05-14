@@ -26,13 +26,13 @@ var Review = (props) => {
                         <div className='helpful-votes'>Helpful? <button onClick={()=> props.review.helpful_yes++}>Yes · {props.review.helpful_yes}</button><button>No · {props.review.helpful_no}</button><button>Report</button></div>
                     </div>
                     <div className="rev-overview" style={{width: '25%', paddingLeft: 20}} >
-                        <div className="quality-rev" style={{fontSize: 13, paddingBottom: 5}}> Quality of Product
-                            <div className="rating-container" style={{width: '80%', height: '10px', backgroungColor: 'gray', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px',border: '1px', padding: '1px', display: 'inline-block'}}>
+                        <div className="quality-rev" style={{fontSize: 13, paddingBottom: 10, fontWeight: 'bold'}}> Quality of Product
+                            <div className="rating-container" style={{width: '80%', height: '10px', backgroungColor: 'gray', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px',border: '1px', padding: '1px', display: 'block', marginTop: 5}}>
                                 <div className="inner-bar" style={{width: `${(props.review.quality/5)*100}%`, backgroundColor: 'black', height: '10px', borderRadius: '2px'}}> </div>
                             </div>
                         </div>
-                        <div className="value-rev" style={{fontSize: 13}}> Value of Product
-                            <div className="rating-container" style={{width: '80%', height: '10px', backgroungColor: 'gray', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px',border: '1px', padding: '1px', display: 'inline-block'}}>
+                        <div className="value-rev" style={{fontSize: 13, fontWeight: 'bold'}}> Value of Product
+                            <div className="rating-container" style={{width: '80%', height: '10px', backgroungColor: 'gray', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px',border: '1px', padding: '1px', display: 'block', marginTop: 5}}>
                                 <div className="inner-bar" style={{width: `${(props.review.value/5)*100}%`, backgroundColor: 'black', height: '10px', borderRadius: '2px'}}> </div>
                             </div>
                         </div>

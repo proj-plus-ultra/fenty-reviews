@@ -2561,7 +2561,7 @@ var Overview = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'review-overview', style: { marginTop: '-1.1em', marginRight: '-1em' } },
+                { className: 'review-overview' /*style={{marginTop: '-1.1em',  marginRight: '-1em'}}*/ },
                 _react2.default.createElement(
                     'h1',
                     { style: { textAlign: 'center', paddingTop: 75, fontSize: 26, fontStyle: 'normal', fontWeight: 900 } },
@@ -2934,11 +2934,11 @@ var Review = function Review(props) {
                 { className: 'rev-overview', style: { width: '25%', paddingLeft: 20 } },
                 _react2.default.createElement(
                     'div',
-                    { className: 'quality-rev', style: { fontSize: 13, paddingBottom: 5 } },
+                    { className: 'quality-rev', style: { fontSize: 13, paddingBottom: 10, fontWeight: 'bold' } },
                     ' Quality of Product',
                     _react2.default.createElement(
                         'div',
-                        { className: 'rating-container', style: { width: '80%', height: '10px', backgroungColor: 'gray', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px', border: '1px', padding: '1px', display: 'inline-block' } },
+                        { className: 'rating-container', style: { width: '80%', height: '10px', backgroungColor: 'gray', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px', border: '1px', padding: '1px', display: 'block', marginTop: 5 } },
                         _react2.default.createElement(
                             'div',
                             { className: 'inner-bar', style: { width: props.review.quality / 5 * 100 + '%', backgroundColor: 'black', height: '10px', borderRadius: '2px' } },
@@ -2948,11 +2948,11 @@ var Review = function Review(props) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'value-rev', style: { fontSize: 13 } },
+                    { className: 'value-rev', style: { fontSize: 13, fontWeight: 'bold' } },
                     ' Value of Product',
                     _react2.default.createElement(
                         'div',
-                        { className: 'rating-container', style: { width: '80%', height: '10px', backgroungColor: 'gray', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px', border: '1px', padding: '1px', display: 'inline-block' } },
+                        { className: 'rating-container', style: { width: '80%', height: '10px', backgroungColor: 'gray', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px', border: '1px', padding: '1px', display: 'block', marginTop: 5 } },
                         _react2.default.createElement(
                             'div',
                             { className: 'inner-bar', style: { width: props.review.value / 5 * 100 + '%', backgroundColor: 'black', height: '10px', borderRadius: '2px' } },
