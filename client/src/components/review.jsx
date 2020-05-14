@@ -3,7 +3,7 @@ import Star from 'react-star-ratings';
 
 var Review = (props) => {
     return (
-        <div id='review' style={{paddingTop: 10}}>
+        <div id='review' style={{paddingTop: 10, paddingLeft: 5}}>
             {props.user ? (
                 <div className="review" style={{display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-evenly', paddingBottom: 50}}> 
                     <div className="user-info" style={{width: '25%', paddingLeft: 10}}>

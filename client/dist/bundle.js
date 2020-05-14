@@ -2785,7 +2785,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Review = function Review(props) {
     return _react2.default.createElement(
         'div',
-        { id: 'review', style: { paddingTop: 10 } },
+        { id: 'review', style: { paddingTop: 10, paddingLeft: 5 } },
         props.user ? _react2.default.createElement(
             'div',
             { className: 'review', style: { display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-evenly', paddingBottom: 50 } },
@@ -3068,7 +3068,7 @@ var ReviewList = function (_React$Component) {
                     { className: 'rev-list-top-bar', style: { fontSize: 13, paddingBottom: 30 } },
                     _react2.default.createElement(
                         'div',
-                        { style: { padding: '20px 0px 20px 10px' } },
+                        { style: { padding: '20px 0px 20px 15px' } },
                         ' ',
                         this.props.rev.length < 8 ? _react2.default.createElement(
                             'span',
@@ -3090,7 +3090,7 @@ var ReviewList = function (_React$Component) {
                             { className: 'rev-dropDown', style: { float: 'right', position: 'relative', display: 'inline-block', paddingRight: 20 } },
                             _react2.default.createElement(
                                 'div',
-                                { className: 'sort-by', style: { backgroundColor: 'white', border: 'none' } },
+                                { className: 'sort-by', style: { backgroundColor: 'white', border: 'none', paddingRight: '8em' } },
                                 'Sort by: ',
                                 this.state.sortBy,
                                 '  \u25BC '

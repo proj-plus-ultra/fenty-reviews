@@ -58,9 +58,9 @@ export default class ReviewList extends React.Component {
         return (
             <div className="review-list" >
                 <div className="rev-list-top-bar" style={{fontSize: 13, paddingBottom: 30}}>
-        <div style={{padding: '20px 0px 20px 10px'}}> {this.props.rev.length < 8 ? (<span>Displaying 0-{this.props.rev.length} of {this.props.rev.length}</span>) : (<span>Displaying 0-{this.state.end} of {this.props.rev.length}</span>)}
+                    <div style={{padding: '20px 0px 20px 15px'}}> {this.props.rev.length < 8 ? (<span>Displaying 0-{this.props.rev.length} of {this.props.rev.length}</span>) : (<span>Displaying 0-{this.state.end} of {this.props.rev.length}</span>)}
                         <span className="rev-dropDown" style={{float: 'right', position: 'relative', display: 'inline-block', paddingRight: 20}}>
-                            <div className="sort-by" style={{backgroundColor: 'white', border: 'none'}}>Sort by: {this.state.sortBy}  ▼ </div>
+                            <div className="sort-by" style={{backgroundColor: 'white', border: 'none', paddingRight: '8em'}}>Sort by: {this.state.sortBy}  ▼ </div>
                             <div className="rev-dropdown-content" style={{position: 'absolute', zIndex: 1, width: '100%'}}>
                                 <div value='relevant' onClick={() => this.sortRevs('relevant')}>Most Relevant</div>
                                 <div value='helpful_yes' onClick={() => this.sortRevs('helpful_yes')}>Most Helpful</div>
