@@ -90,8 +90,8 @@ export default class Reviews extends React.Component {
     render() {
         return (
             <div className="reviews">
-                <div className="review-snapshot" style={{borderTop: '3px solid black', margin: '-0.5em -1em'}}>
-                    <div style={{margin: '5px 1em', padding: '5px 0px 10px 10px', fontSize: 13}}>
+                <div className="review-snapshot" style={{borderTop: '3px solid black'}}>
+                    <div style={{margin: '5px 1em', padding: '10px 0px 10px 10px', fontSize: 13}}>
                         <StarRating starDimension="15px" starSpacing="0px" name="rev-rating" starRatedColor="black" totalStars={5} rating={this.state.revSnapshot.avgRev} />
                         <a style={{paddingLeft: 10, paddingRight: 10, borderRight: '1px solid #bbb'}} >{(Math.round(this.state.revSnapshot.avgRev * 100) / 100).toFixed(1)}</a>
                         <a style={{paddingLeft: 10}}>{this.state.reviews.length} Reviews</a>                        
