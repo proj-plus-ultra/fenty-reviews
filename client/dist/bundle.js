@@ -1621,10 +1621,10 @@ var Reviews = function (_React$Component) {
                 { className: 'reviews' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'review-snapshot', style: { borderTop: '3px solid black', margin: '-0.5em -1em' } },
+                    { className: 'review-snapshot', style: { borderTop: '3px solid black' } },
                     _react2.default.createElement(
                         'div',
-                        { style: { margin: '5px 1em', padding: '5px 0px 10px 10px', fontSize: 13 } },
+                        { style: { margin: '5px 1em', padding: '10px 0px 10px 10px', fontSize: 13 } },
                         _react2.default.createElement(_reactStarRatings2.default, { starDimension: '15px', starSpacing: '0px', name: 'rev-rating', starRatedColor: 'black', totalStars: 5, rating: this.state.revSnapshot.avgRev }),
                         _react2.default.createElement(
                             'a',
@@ -2561,200 +2561,184 @@ var Overview = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'review-overview' /*style={{marginTop: '-1.1em',  marginRight: '-1em'}}*/ },
+                { className: 'review-overview', style: { marginBottom: '2em' } },
                 _react2.default.createElement(
-                    'h1',
-                    { style: { textAlign: 'center', paddingTop: 75, fontSize: 26, fontStyle: 'normal', fontWeight: 900 } },
+                    'div',
+                    { style: { textAlign: 'center', paddingTop: 75, fontSize: 26, fontStyle: 'normal', fontWeight: 'bold', paddingBottom: 20 } },
                     'REVIEWS'
                 ),
                 _react2.default.createElement(
                     'h2',
-                    { onClick: this.props.onClick, style: { textAlign: 'center', fontSize: 13 } },
+                    { onClick: this.props.onClick, style: { textAlign: 'center', fontSize: 13, paddingBottom: 50 } },
                     'WRITE A REVIEW'
                 ),
                 _react2.default.createElement(
-                    'table',
-                    { style: { width: '100%', paddingTop: 40, paddingBottom: 30 } },
+                    'div',
+                    { className: 'rev-overview-container', style: { display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' } },
                     _react2.default.createElement(
-                        'tbody',
-                        null,
+                        'div',
+                        { className: 'rating-snapshot', style: { fontSize: 13, width: '100%', paddingLeft: 20 } },
                         _react2.default.createElement(
-                            'tr',
-                            { style: { textAlign: 'left' } },
+                            'div',
+                            { id: 'head', style: { paddingBottom: 10 } },
+                            'Rating Snapshot'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { style: { paddingBottom: 20 } },
+                            'Select a row below to filter reviews.'
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: { paddingLeft: 5, width: '50%' } },
                             _react2.default.createElement(
-                                'td',
-                                { style: { paddingLeft: 20 } },
+                                'div',
+                                { style: { width: '100%', paddingBottom: 12 }, onClick: function onClick() {
+                                        return _this2.props.filterBy(5);
+                                    } },
                                 _react2.default.createElement(
-                                    'div',
-                                    { className: 'rating-snapshot', style: { fontSize: 13 } },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { id: 'head' },
-                                        'Rating Snapshot'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        null,
-                                        'Select a row below to filter reviews.'
-                                    ),
-                                    _react2.default.createElement(
-                                        'table',
-                                        { style: { paddingLeft: 5, width: '50%' } },
-                                        _react2.default.createElement(
-                                            'tbody',
-                                            null,
-                                            _react2.default.createElement(
-                                                'tr',
-                                                { style: { width: '100%' }, onClick: function onClick() {
-                                                        return _this2.props.filterBy(5);
-                                                    } },
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    '5 \u2B51 ',
-                                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['5'], ttlRev: this.props.reviews.length }),
-                                                    ' ',
-                                                    this.state.sortedRevs['5']
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'tr',
-                                                { onClick: function onClick() {
-                                                        return _this2.props.filterBy(4);
-                                                    } },
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    '4 \u2B51 ',
-                                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['4'], ttlRev: this.props.reviews.length }),
-                                                    ' ',
-                                                    this.state.sortedRevs['4']
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'tr',
-                                                { onClick: function onClick() {
-                                                        return _this2.props.filterBy(3);
-                                                    } },
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    '3 \u2B51 ',
-                                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['3'], ttlRev: this.props.reviews.length }),
-                                                    ' ',
-                                                    this.state.sortedRevs['3']
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'tr',
-                                                { onClick: function onClick() {
-                                                        return _this2.props.filterBy(2);
-                                                    } },
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    '2 \u2B51 ',
-                                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['2'], ttlRev: this.props.reviews.length }),
-                                                    ' ',
-                                                    this.state.sortedRevs['2']
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'tr',
-                                                { onClick: function onClick() {
-                                                        return _this2.props.filterBy(1);
-                                                    } },
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    '1 \u2B51 ',
-                                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['1'], ttlRev: this.props.reviews.length }),
-                                                    ' ',
-                                                    this.state.sortedRevs['1']
-                                                )
-                                            )
-                                        )
-                                    )
+                                    'span',
+                                    null,
+                                    '5 \u2B51 ',
+                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['5'], ttlRev: this.props.reviews.length }),
+                                    ' ',
+                                    this.state.sortedRevs['5']
                                 )
                             ),
                             _react2.default.createElement(
-                                'td',
-                                { style: { width: '50%' } },
+                                'div',
+                                { style: { width: '100%', paddingBottom: 12 }, onClick: function onClick() {
+                                        return _this2.props.filterBy(4);
+                                    } },
                                 _react2.default.createElement(
-                                    'div',
-                                    { className: 'avg-cust-rating', style: { fontSize: 13 } },
+                                    'span',
+                                    null,
+                                    '4 \u2B51 ',
+                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['4'], ttlRev: this.props.reviews.length }),
+                                    ' ',
+                                    this.state.sortedRevs['4']
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: { width: '100%', paddingBottom: 12 }, onClick: function onClick() {
+                                        return _this2.props.filterBy(3);
+                                    } },
+                                _react2.default.createElement(
+                                    'span',
+                                    null,
+                                    '3 \u2B51 ',
+                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['3'], ttlRev: this.props.reviews.length }),
+                                    ' ',
+                                    this.state.sortedRevs['3']
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: { width: '100%', paddingBottom: 12 }, onClick: function onClick() {
+                                        return _this2.props.filterBy(2);
+                                    } },
+                                _react2.default.createElement(
+                                    'span',
+                                    null,
+                                    '2 \u2B51 ',
+                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['2'], ttlRev: this.props.reviews.length }),
+                                    ' ',
+                                    this.state.sortedRevs['2']
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { style: { width: '100%', paddingBottom: 12 }, onClick: function onClick() {
+                                        return _this2.props.filterBy(1);
+                                    } },
+                                _react2.default.createElement(
+                                    'span',
+                                    null,
+                                    '1 \u2B51 ',
+                                    _react2.default.createElement(Bar, { width: '80%', rev: this.state.sortedRevs['1'], ttlRev: this.props.reviews.length }),
+                                    ' ',
+                                    this.state.sortedRevs['1']
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { style: { width: '50%' } },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'avg-cust-rating', style: { fontSize: 13, width: '100%' } },
+                            _react2.default.createElement(
+                                'div',
+                                { style: { paddingBottom: '10px' } },
+                                'Average Customer Rating'
+                            ),
+                            _react2.default.createElement(
+                                'table',
+                                { className: 'avg-customer-ratings' },
+                                _react2.default.createElement(
+                                    'tbody',
+                                    { style: { lineHeight: '20px' } },
                                     _react2.default.createElement(
-                                        'div',
-                                        { style: { paddingBottom: '10px' } },
-                                        'Average Customer Rating'
+                                        'tr',
+                                        { className: 'overall' },
+                                        _react2.default.createElement(
+                                            'td',
+                                            null,
+                                            'Overall'
+                                        ),
+                                        _react2.default.createElement(
+                                            'td',
+                                            { style: { paddingLeft: '10px' } },
+                                            _react2.default.createElement(_reactStarRatings2.default, { starDimension: '18px', starSpacing: '0px', name: 'rev-rating', starRatedColor: 'black', totalStars: 5, rating: this.props.revSnapshot.avgRev }),
+                                            ' '
+                                        ),
+                                        _react2.default.createElement(
+                                            'td',
+                                            { style: { paddingLeft: '40px' } },
+                                            ' ',
+                                            (Math.round(this.props.revSnapshot.avgRev * 100) / 100).toFixed(1)
+                                        )
                                     ),
                                     _react2.default.createElement(
-                                        'table',
-                                        { className: 'avg-customer-ratings' },
+                                        'tr',
+                                        { className: 'quality-of-product' },
                                         _react2.default.createElement(
-                                            'tbody',
+                                            'td',
                                             null,
-                                            _react2.default.createElement(
-                                                'tr',
-                                                { className: 'overall' },
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    'Overall'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    _react2.default.createElement(_reactStarRatings2.default, { starDimension: '18px', starSpacing: '0px', name: 'rev-rating', starRatedColor: 'black', totalStars: 5, rating: this.props.revSnapshot.avgRev }),
-                                                    ' '
-                                                ),
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    { style: { paddingLeft: '5px' } },
-                                                    ' ',
-                                                    (Math.round(this.props.revSnapshot.avgRev * 100) / 100).toFixed(1)
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'tr',
-                                                { className: 'quality-of-product' },
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    'Quality of Product'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    _react2.default.createElement(Bar, { rev: this.props.revSnapshot.avgQual, ttlRev: 5, width: '100%' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    { style: { paddingLeft: '5px' } },
-                                                    ' ',
-                                                    (Math.round(this.props.revSnapshot.avgQual * 100) / 100).toFixed(1)
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'tr',
-                                                { className: 'value-of-product' },
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    'Value of Product'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    null,
-                                                    _react2.default.createElement(Bar, { rev: this.props.revSnapshot.avgVal, ttlRev: 5, width: '100%' })
-                                                ),
-                                                _react2.default.createElement(
-                                                    'td',
-                                                    { style: { paddingLeft: '5px' } },
-                                                    ' ',
-                                                    (Math.round(this.props.revSnapshot.avgVal * 100) / 100).toFixed(1)
-                                                )
-                                            )
+                                            'Quality of Product'
+                                        ),
+                                        _react2.default.createElement(
+                                            'td',
+                                            { style: { paddingLeft: '10px' } },
+                                            _react2.default.createElement(Bar, { rev: this.props.revSnapshot.avgQual, ttlRev: 5, width: '100%' })
+                                        ),
+                                        _react2.default.createElement(
+                                            'td',
+                                            { style: { paddingLeft: '40px' } },
+                                            ' ',
+                                            (Math.round(this.props.revSnapshot.avgQual * 100) / 100).toFixed(1)
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'tr',
+                                        { className: 'value-of-product' },
+                                        _react2.default.createElement(
+                                            'td',
+                                            null,
+                                            'Value of Product'
+                                        ),
+                                        _react2.default.createElement(
+                                            'td',
+                                            { style: { paddingLeft: '10px' } },
+                                            _react2.default.createElement(Bar, { rev: this.props.revSnapshot.avgVal, ttlRev: 5, width: '100%' })
+                                        ),
+                                        _react2.default.createElement(
+                                            'td',
+                                            { style: { paddingLeft: '40px' } },
+                                            ' ',
+                                            (Math.round(this.props.revSnapshot.avgVal * 100) / 100).toFixed(1)
                                         )
                                     )
                                 )
@@ -2774,7 +2758,7 @@ var Overview = function (_React$Component) {
 var Bar = function Bar(props) {
     return _react2.default.createElement(
         'span',
-        { className: 'rating-container', style: { width: props.width, height: '10px', backgroundColor: '#ccc', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px', border: '1px', padding: '1px', display: 'inline-block' } },
+        { className: 'rating-container', style: { width: props.width, height: '10px', backgroundColor: '#ccc', boxShadow: 'inset 0 0 2px rgba(0,0,0,.25)', borderRadius: '2px', border: '1px', padding: '1px', display: 'inline-block', margin: '0 5px 0 5px' } },
         _react2.default.createElement(
             'div',
             { className: 'inner-bar', style: { width: props.rev / props.ttlRev * 100 + '%', backgroundColor: 'black', height: '10px', borderRadius: '2px' } },
