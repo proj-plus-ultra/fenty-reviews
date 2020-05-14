@@ -1545,7 +1545,7 @@ var Reviews = function (_React$Component) {
         value: function getRevs() {
             var _this2 = this;
 
-            _axios2.default.get('/reviews').then(function (result) {
+            _axios2.default.get('http://localhost:5050/reviews').then(function (result) {
                 _this2.setState({
                     sorted: result.data
                 });
@@ -1578,7 +1578,7 @@ var Reviews = function (_React$Component) {
         value: function getUsers() {
             var _this3 = this;
 
-            _axios2.default.get('/reviews/users').then(function (results) {
+            _axios2.default.get('http://localhost:5050/reviews/users').then(function (results) {
                 _this3.setState({
                     users: results.data
                 });
